@@ -1,0 +1,294 @@
+{
+  "data": [
+    {
+      "id": "0ca91144-4763-467c-bfd4-5234e0576a63",
+      "name": "Webhook / Request URL",
+      "key": "request_q0wef_fqhao",
+      "type": "request",
+      "position_x": 37,
+      "position_y": 32,
+      "options": {
+        "method": "POST",
+        "url": "https://n8n.soucannabis.ong.br/webhook/e0f4bdc8-c36a-495e-962b-ae78ad25bdf1",
+        "body": "{\n    \"userData\": {{item_read_8k92j}},\n    \"cardId\": {{request_ckkte_myjdu.data.data.createCard.card.id}}\n}"
+      },
+      "resolve": null,
+      "reject": null,
+      "flow": "1d8a7400-b7ef-40da-9cf1-9ac7a6600f2e",
+      "date_created": "2023-11-15T19:07:27.121Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "1f2348d7-8bea-4656-abe6-bf35274e0087",
+      "name": "Webhook / Request URL",
+      "key": "request_ckkte",
+      "type": "request",
+      "position_x": 37,
+      "position_y": 16,
+      "options": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "headers": [
+          {
+            "header": "Authorization",
+            "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyIjp7ImlkIjozMDE5OTU2ODEsImVtYWlsIjoiZmVsaXBlcm9zZW5la0BnbWFpbC5jb20iLCJhcHBsaWNhdGlvbiI6MzAwMTQyMDIwfX0.JugAF92MqbUV_fLVKEcF5jUI3G4G2hlAmLeBJ-dEfsEIlX3gdKO1IfbQRUYvHvAk569vuD9K_zCrKylY6R6agw"
+          },
+          {
+            "header": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "header": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": "{\n    \"query\": \"mutation {\\n  createCard(input:{\\n    pipe_id: 301738151 \\n    phase_id: 311520852 \\n    title: \\\"{{item_read_8lo4m[0].name_associate}}\\\" \\n    fields_attributes: [\\n      {\\n        field_id: \\\"termo_assinado_docuseal\\\",\\n        field_value: \\\"{{item_read_8k92j.contract}}\\\"\\n      },\\n      { field_id: \\\"nacionalidade\\\", field_value: \\\"{{item_read_8k92j.nationality}}\\\" },\\n      { field_id: \\\"pa_s_de_nascimento\\\", field_value: \\\"Nasci no Brasil\\\" },\\n      { field_id: \\\"g_nero\\\", field_value: \\\"{{item_read_8k92j.gender}}\\\" },\\n      { field_id: \\\"nome\\\", field_value: \\\"{{item_read_8lo4m[0].name_associate}}\\\" },\\n      { field_id: \\\"sobrenome\\\", field_value: \\\"{{item_read_8lo4m[0].lastname_associate}}\\\" },\\n      {\\n        field_id: \\\"data_de_nascimento_do_paciente\\\",\\n        field_value: \\\"{{item_read_8lo4m[0].birthday_associate}}\\\"\\n      },\\n      { field_id: \\\"cpf_do_associado\\\", field_value: \\\"{{item_read_8lo4m[0].cpf_associate}}\\\" },\\n      { field_id: \\\"rg_do_associado\\\", field_value: \\\"{{item_read_8lo4m[0].rg_associate}}\\\" },\\n      { field_id: \\\"nome_do_paciente\\\", field_value: \\\"{{item_read_8k92j.name_associate}}\\\" },\\n      {\\n        field_id: \\\"copy_of_primeiro_nome_do_respons_vel\\\",\\n        field_value: \\\"{{item_read_8k92j.lastname_associate}}\\\"\\n      },\\n      { field_id: \\\"estado_civil\\\", field_value: \\\"{{item_read_8k92j.marital_status}}\\\" },\\n      { field_id: \\\"email\\\", field_value: \\\"{{item_read_8k92j.email_account}}\\\" },\\n      { field_id: \\\"telefone_celular\\\", field_value: \\\"{{item_read_8k92j.mobile_number}}\\\" },\\n      { field_id: \\\"n_mero\\\", field_value: \\\"{{item_read_8k92j.number}}\\\" },\\n      { field_id: \\\"complemento\\\", field_value: \\\"{{item_read_8k92j.complement}}\\\" },\\n      { field_id: \\\"cidade\\\", field_value: \\\"{{item_read_8k92j.city}}\\\" },\\n      { field_id: \\\"identidade_de_g_nero\\\", field_value: \\\"Outro\\\" },\\n      {\\n        field_id: \\\"data_de_nascimento_do_respons_vel_1\\\",\\n        field_value: \\\"{{item_read_8k92j.birthday_associate}}\\\"\\n      },\\n      { field_id: \\\"pa_s_de_origem\\\", field_value: \\\"{{item_read_8k92j.nationality}}\\\" },\\n      { field_id: \\\"cpf_do_respons_vel\\\", field_value: \\\"{{item_read_8k92j.cpf_associate}}\\\" },\\n      { field_id: \\\"rg_do_respons_vel_1\\\", field_value: \\\"{{item_read_8k92j.rg_associate}}\\\" },\\n      { field_id: \\\"org_o_emissor\\\", field_value: \\\"{{item_read_8k92j.emiiter_rg_associate}}\\\" },\\n      {\\n        field_id: \\\"endere_o_completo\\\",\\n        field_value: \\\"{{item_read_8k92j.street}}, {{item_read_8k92j.number}} - {{item_read_8k92j.city}} - {{item_read_8k92j.state}} - \\\\nCEP: {{item_read_8k92j.cep}}\\\"\\n      },\\n      { field_id: \\\"rua\\\", field_value: \\\"{{item_read_8k92j.street}}\\\" },\\n      { field_id: \\\"bairro\\\", field_value: \\\"{{item_read_8k92j.neighborhood}}\\\" },\\n      { field_id: \\\"cep\\\", field_value: \\\"{{item_read_8k92j.cep}}\\\" },\\n      { field_id: \\\"estado\\\", field_value: \\\"{{item_read_8k92j.state}}\\\" },\\n      {\\n        field_id: \\\"voc_respons_vel_pelo_seu_pr_prio_tratamento\\\",\\n        field_value: \\\"NÃO. Sou responsável pelo tratamento de alguém.\\\"\\n      },\\n      {\\n        field_id: \\\"como_voc_conheceu_a_soucannabis\\\",\\n        field_value: \\\"Outra\\\"\\n      },\\n      {\\n        field_id: \\\"checklist_vertical_t_tulo\\\",\\n        field_value: [\\\"Li e estou de acordo com os termos de responsabilidade.\\\"]\\n      }\\n    ]\\n  }){\\n    card {\\n      id\\n      title\\n    }\\n  }\\n}\"\n  }\n  "
+      },
+      "resolve": "e123ad86-dcc2-4e97-a79e-d5eea27c25de",
+      "reject": null,
+      "flow": "1d8a7400-b7ef-40da-9cf1-9ac7a6600f2e",
+      "date_created": "2023-11-15T19:07:27.087Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "250ac57b-1daf-4c1b-9060-71c9d504f14f",
+      "name": "Condition",
+      "key": "condition_yhsy0",
+      "type": "condition",
+      "position_x": 1,
+      "position_y": 16,
+      "options": {
+        "filter": {
+          "$last": {
+            "responsable_type": {
+              "_eq": "another"
+            }
+          }
+        }
+      },
+      "resolve": "a9a142a7-3549-4ddc-8a8b-3d7da00345dd",
+      "reject": "eddad53d-d280-40d3-947e-fc86d0ee993d",
+      "flow": "1d8a7400-b7ef-40da-9cf1-9ac7a6600f2e",
+      "date_created": "2023-11-15T19:07:27.143Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "381f6b14-af51-4833-af32-a61ad585d4eb",
+      "name": "Read Data",
+      "key": "item_read_ytjws",
+      "type": "item-read",
+      "position_x": 19,
+      "position_y": 1,
+      "options": {
+        "key": ["{{$trigger.key}}"],
+        "collection": "Users"
+      },
+      "resolve": "d069665d-efc0-4052-895e-47ebe39afa4e",
+      "reject": null,
+      "flow": "3922d99e-a01c-4509-914b-01b13ad13165",
+      "date_created": "2024-02-07T10:21:10.952Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "60959bf7-dd62-4564-abdc-75481fd51578",
+      "name": "Condition",
+      "key": "condition",
+      "type": "condition",
+      "position_x": 19,
+      "position_y": 1,
+      "options": {
+        "filter": {
+          "$trigger": {
+            "payload": {
+              "status": {
+                "_or": [
+                  {
+                    "_eq": "prescription"
+                  },
+                  {
+                    "_eq": "aguardando-aprovacao"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "resolve": "dd0c2f5e-4f6f-45c9-ba3a-9793d19ed3ea",
+      "reject": null,
+      "flow": "2957dce4-8e0c-4c3a-9f55-a4b0e228dce3",
+      "date_created": "2024-02-22T14:26:00.876Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "a9a142a7-3549-4ddc-8a8b-3d7da00345dd",
+      "name": "Read Data",
+      "key": "item_read_8lo4m",
+      "type": "item-read",
+      "position_x": 19,
+      "position_y": 16,
+      "options": {
+        "query": {
+          "filter": {
+            "user_code": {
+              "_eq": "{{item_read_8k92j.responsible_for}}"
+            }
+          }
+        },
+        "collection": "Users",
+        "permissions": "$full"
+      },
+      "resolve": "1f2348d7-8bea-4656-abe6-bf35274e0087",
+      "reject": null,
+      "flow": "1d8a7400-b7ef-40da-9cf1-9ac7a6600f2e",
+      "date_created": "2023-11-15T19:07:27.103Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "c35b0e0e-c6e3-4cf7-a9e2-74199afe34eb",
+      "name": "Read Data",
+      "key": "item_read_8k92j",
+      "type": "item-read",
+      "position_x": 37,
+      "position_y": 1,
+      "options": {
+        "key": ["{{$trigger.keys[0]}}"],
+        "permissions": "$full",
+        "collection": "Users"
+      },
+      "resolve": "250ac57b-1daf-4c1b-9060-71c9d504f14f",
+      "reject": null,
+      "flow": "1d8a7400-b7ef-40da-9cf1-9ac7a6600f2e",
+      "date_created": "2023-11-15T19:07:27.158Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "d069665d-efc0-4052-895e-47ebe39afa4e",
+      "name": "Webhook / Request URL",
+      "key": "request_5c3ly",
+      "type": "request",
+      "position_x": 37,
+      "position_y": 1,
+      "options": {
+        "url": "https://ntfy.sh/Soucannabis",
+        "method": "POST",
+        "body": "Novo usuário criado - {{item_read_ytjws.email_account}}"
+      },
+      "resolve": null,
+      "reject": null,
+      "flow": "3922d99e-a01c-4509-914b-01b13ad13165",
+      "date_created": "2024-02-07T10:19:07.070Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "d6e1710a-875a-4c42-b419-b4d779989b07",
+      "name": "Condition",
+      "key": "condition_9ulmc",
+      "type": "condition",
+      "position_x": 19,
+      "position_y": 1,
+      "options": {
+        "filter": {
+          "$trigger": {
+            "payload": {
+              "status": {
+                "_eq": "signedcontract"
+              }
+            }
+          }
+        }
+      },
+      "resolve": "c35b0e0e-c6e3-4cf7-a9e2-74199afe34eb",
+      "reject": null,
+      "flow": "1d8a7400-b7ef-40da-9cf1-9ac7a6600f2e",
+      "date_created": "2023-11-15T19:07:27.170Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "dd0c2f5e-4f6f-45c9-ba3a-9793d19ed3ea",
+      "name": "Read Data",
+      "key": "item_read_vp74i",
+      "type": "item-read",
+      "position_x": 37,
+      "position_y": 1,
+      "options": {
+        "collection": "Users",
+        "permissions": "$full",
+        "key": ["{{$trigger.keys[0]}}"]
+      },
+      "resolve": "e090157c-a8db-4649-9447-fe877d1368fd",
+      "reject": null,
+      "flow": "2957dce4-8e0c-4c3a-9f55-a4b0e228dce3",
+      "date_created": "2024-02-22T14:26:00.864Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "e090157c-a8db-4649-9447-fe877d1368fd",
+      "name": "Webhook / Request URL",
+      "key": "request_rzkrj",
+      "type": "request",
+      "position_x": 55,
+      "position_y": 1,
+      "options": {
+        "url": "https://n8n.soucannabis.ong.br/webhook/f1797de4-5086-495b-a55b-68962874e69b",
+        "body": "{\n    \"userData\": {{item_read_vp74i}},\n    \"xx\":\"xx\"\n}",
+        "method": "POST"
+      },
+      "resolve": null,
+      "reject": null,
+      "flow": "2957dce4-8e0c-4c3a-9f55-a4b0e228dce3",
+      "date_created": "2024-02-22T14:26:00.854Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "e123ad86-dcc2-4e97-a79e-d5eea27c25de",
+      "name": "Webhook / Request URL",
+      "key": "request_q0wef",
+      "type": "request",
+      "position_x": 55,
+      "position_y": 16,
+      "options": {
+        "method": "POST",
+        "url": "https://n8n.soucannabis.ong.br/webhook/e0f4bdc8-c36a-495e-962b-ae78ad25bdf1",
+        "body": "{\n    \"userData\": {{item_read_8k92j}},\n    \"cardId\": {{request_ckkte.data.data.createCard.card.id}}\n}"
+      },
+      "resolve": null,
+      "reject": null,
+      "flow": "1d8a7400-b7ef-40da-9cf1-9ac7a6600f2e",
+      "date_created": "2023-11-15T19:07:27.077Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    },
+    {
+      "id": "eddad53d-d280-40d3-947e-fc86d0ee993d",
+      "name": "Webhook / Request URL",
+      "key": "request_ckkte_myjdu",
+      "type": "request",
+      "position_x": 19,
+      "position_y": 31,
+      "options": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "headers": [
+          {
+            "header": "Authorization",
+            "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyIjp7ImlkIjozMDE5OTU2ODEsImVtYWlsIjoiZmVsaXBlcm9zZW5la0BnbWFpbC5jb20iLCJhcHBsaWNhdGlvbiI6MzAwMTQyMDIwfX0.JugAF92MqbUV_fLVKEcF5jUI3G4G2hlAmLeBJ-dEfsEIlX3gdKO1IfbQRUYvHvAk569vuD9K_zCrKylY6R6agw"
+          },
+          {
+            "header": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "header": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": "{\n    \"query\": \"mutation {\\n  createCard(input:{\\n    pipe_id: 301738151 \\n    phase_id: 311520852 \\n    title: \\\"{{item_read_8k92j.name_associate}}\\\" \\n    fields_attributes: [\\n      {\\n        field_id: \\\"termo_assinado_docuseal\\\",\\n        field_value: \\\"{{item_read_8k92j.contract}}\\\"\\n      },\\n      { field_id: \\\"nacionalidade\\\", field_value: \\\"{{item_read_8k92j.nationality}}\\\" },\\n      { field_id: \\\"pa_s_de_nascimento\\\", field_value: \\\"Nasci no Brasil\\\" },\\n      { field_id: \\\"g_nero\\\", field_value: \\\"{{item_read_8k92j.gender}}\\\" },\\n      { field_id: \\\"nome\\\", field_value: \\\"{{item_read_8k92j.name_associate}}\\\" },\\n      { field_id: \\\"sobrenome\\\", field_value: \\\"{{item_read_8k92j.lastname_associate}}\\\" },\\n      {\\n        field_id: \\\"data_de_nascimento_do_paciente\\\",\\n        field_value: \\\"{{item_read_8k92j.birthday_associate}}\\\"\\n      },\\n      { field_id: \\\"cpf_do_associado\\\", field_value: \\\"{{item_read_8k92j.cpf_associate}}\\\" },\\n      { field_id: \\\"rg_do_associado\\\", field_value: \\\"{{item_read_8k92j.rg_associate}}\\\" },\\n      { field_id: \\\"nome_do_paciente\\\", field_value: \\\"{{item_read_8k92j.name_associate}}\\\" },\\n      {\\n        field_id: \\\"copy_of_primeiro_nome_do_respons_vel\\\",\\n        field_value: \\\"{{item_read_8k92j.lastname_associate}}\\\"\\n      },\\n      { field_id: \\\"estado_civil\\\", field_value: \\\"{{item_read_8k92j.marital_status}}\\\" },\\n      { field_id: \\\"email\\\", field_value: \\\"{{item_read_8k92j.email_account}}\\\" },\\n      { field_id: \\\"telefone_celular\\\", field_value: \\\"{{item_read_8k92j.mobile_number}}\\\" },\\n      { field_id: \\\"n_mero\\\", field_value: \\\"{{item_read_8k92j.number}}\\\" },\\n      { field_id: \\\"complemento\\\", field_value: \\\"{{item_read_8k92j.complement}}\\\" },\\n      { field_id: \\\"cidade\\\", field_value: \\\"{{item_read_8k92j.city}}\\\" },\\n      { field_id: \\\"identidade_de_g_nero\\\", field_value: \\\"Outro\\\" },\\n      {\\n        field_id: \\\"data_de_nascimento_do_respons_vel_1\\\",\\n        field_value: \\\"{{item_read_8k92j.birthday_associate}}\\\"\\n      },\\n      { field_id: \\\"pa_s_de_origem\\\", field_value: \\\"{{item_read_8k92j.nationality}}\\\" },\\n      { field_id: \\\"cpf_do_respons_vel\\\", field_value: \\\"{{item_read_8k92j.cpf_associate}}\\\" },\\n      { field_id: \\\"rg_do_respons_vel_1\\\", field_value: \\\"{{item_read_8k92j.rg_associate}}\\\" },\\n      { field_id: \\\"org_o_emissor\\\", field_value: \\\"{{item_read_8k92j.emiiter_rg_associate}}\\\" },\\n      {\\n        field_id: \\\"endere_o_completo\\\",\\n        field_value: \\\"{{item_read_8k92j.street}}, {{item_read_8k92j.number}} - {{item_read_8k92j.city}} - {{item_read_8k92j.state}} - \\\\nCEP: {{item_read_8k92j.cep}}\\\"\\n      },\\n      { field_id: \\\"rua\\\", field_value: \\\"{{item_read_8k92j.street}}\\\" },\\n      { field_id: \\\"bairro\\\", field_value: \\\"{{item_read_8k92j.neighborhood}}\\\" },\\n      { field_id: \\\"cep\\\", field_value: \\\"{{item_read_8k92j.cep}}\\\" },\\n      { field_id: \\\"estado\\\", field_value: \\\"{{item_read_8k92j.state}}\\\" },\\n      {\\n        field_id: \\\"voc_respons_vel_pelo_seu_pr_prio_tratamento\\\",\\n        field_value: \\\"SIM\\\"\\n      },\\n      {\\n        field_id: \\\"como_voc_conheceu_a_soucannabis\\\",\\n        field_value: \\\"Outra\\\"\\n      },\\n      {\\n        field_id: \\\"checklist_vertical_t_tulo\\\",\\n        field_value: [\\\"Li e estou de acordo com os termos de responsabilidade.\\\"]\\n      }\\n    ]\\n  }){\\n    card {\\n      id\\n      title\\n    }\\n  }\\n}\"\n  }\n  "
+      },
+      "resolve": "0ca91144-4763-467c-bfd4-5234e0576a63",
+      "reject": null,
+      "flow": "1d8a7400-b7ef-40da-9cf1-9ac7a6600f2e",
+      "date_created": "2023-11-15T19:07:27.130Z",
+      "user_created": "56f0315f-79ea-4d4e-8384-27531e3f4562"
+    }
+  ]
+}
